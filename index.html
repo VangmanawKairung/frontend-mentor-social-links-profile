@@ -11,15 +11,100 @@
       href="./assets/images/sunflower.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor Challange| Social links profile</title>
 
     <style>
+      :root {
+        --general-text-color: hsl(0, 0%, 100%);
+        --highlight-text-color: hsl(75, 94%, 57%);
+        --main-bg: hsl(0, 0%, 8%);
+        --card-bg: hsl(0, 0%, 12%);
+        --button-bg: hsl(0, 0%, 20%);
+        --font-family: "Inter", sans-serif;
+        --font-size: 14px;
+        --font-weight-regular: 400;
+        --font-weight-medium: 600;
+        --font-weight-bold: 700;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--font-family);
+        font-weight: var(--font-weight-medium);
+        color: var(--general-text-color);
+        font-size: var(--font-size);
+      }
+
+      body {
+        background-color: var(--main-bg);
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+
+      main,
       footer {
+        position: absolute;
+      }
+
+      main {
+        width: 326px;
+        height: 580px;
+        background-color: var(--card-bg);
+
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+
+      main,
+      .social-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button.social-link {
+        width: 100%;
+        height: 45px;
+        background-color: var(--button-bg);
+      }
+
+      footer,
+      footer a {
         font-size: 11px;
         text-align: center;
       }
+
+      footer {
+        bottom: 15px;
+        left: 50%;
+        translate: -50% 0;
+        color: var(--button-bg);
+      }
+
       footer a {
-        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+        color: var(--general-text-color);
+      }
+
+      @media (min-width: 1024px) {
+        main {
+          width: 384px;
+          height: 612px;
+        }
       }
     </style>
   </head>
